@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSBookReviewWepApi", "OSBookReviewWepApi.csproj", "{FBB70B32-AABD-49E3-9857-C997BCDD11B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBB70B32-AABD-49E3-9857-C997BCDD11B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB70B32-AABD-49E3-9857-C997BCDD11B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBB70B32-AABD-49E3-9857-C997BCDD11B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBB70B32-AABD-49E3-9857-C997BCDD11B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34DB09F5-3FFA-4F4D-82B8-8EB2EBEA0B02}
+	EndGlobalSection
+EndGlobal
