@@ -9,7 +9,7 @@ using System.Text;
 namespace OSBookReviewWepApi.Controllers
 {
     // add routing
-    [Route("[controller]")]
+    [Route("api/[controller]")]
 
     public class TokenController : ControllerBase
     {
