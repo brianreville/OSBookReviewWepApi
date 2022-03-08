@@ -16,6 +16,7 @@ builder.Services.AddControllers();
 // add dependency injection interface references
 builder.Services.AddTransient<IDataAccess, DataAccess>();
 builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
+builder.Services.AddTransient<ILoginData, LoginData>();
 builder.Services.AddTransient<IDataClass, DataClass>();
 // add authenticaion , using jwt bearing token authentincation for api calls
 builder.Services.AddAuthentication(options =>

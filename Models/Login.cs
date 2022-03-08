@@ -6,7 +6,7 @@ namespace OSBookReviewWebApi.Model
     {
         [Key]
         public int Userid { get; set; }
-        public string? Uaid { get; set; }
+        public int Uaid { get; set; }
         public int AccessLevel { get; set; }
         public string? UserName { get; set; }
         public string? UserPword { get; set; }
