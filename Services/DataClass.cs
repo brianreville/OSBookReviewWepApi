@@ -126,9 +126,9 @@ namespace OSBookReviewWepApi.Services
             {
                 DynamicParameters p = new();
                 // add params                
-                p.Add("@aid", aid);
+                p.Add("@AID", aid);
                 // stored prodecure to be called
-                string sql = "";
+                string sql = "dbo.spGetAuthorBooks";
 
                 List<BookReview> books = await _data.GetList<BookReview, dynamic>(sql, p);
                 return books;
@@ -148,7 +148,7 @@ namespace OSBookReviewWepApi.Services
                 // add params if any
 
                 // stored procedure to be called
-                string sql = "";
+                string sql = "dbo.spGetTop50Authors";
 
                 List<Author> authors = await _data.GetList<Author, dynamic>(sql, p);
                 return authors;
