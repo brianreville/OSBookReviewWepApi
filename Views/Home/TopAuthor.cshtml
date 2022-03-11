@@ -1,0 +1,29 @@
+﻿@model OSBookReviewWepApi.Views.Home.TopAuthorModel
+@{
+    await Model.OnGetAsync();
+}
+
+<h1>Top 50 Authors</h1>
+<div class="center">
+    <h4>Customers</h4>
+    <hr/>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>Author ID</th>
+            <th>Author Name</th>
+            <th>Publisher Name</th>
+            <th>Overall Rating</th>
+        </tr>
+        @foreach (Author author in Model.Authors)
+        {
+            <tr>
+                <td>@author.AID <a></a></td>
+                <td>@author.AuthorName</td>
+                <td>@author.PublisherName</td>
+                <td>@author.OverallRating</td>
+            </tr>
+        }
+    </table>
+
+</div>
+

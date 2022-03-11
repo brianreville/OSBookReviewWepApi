@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OSBookReviewWebApi.Model
+namespace OSBookReviewWepApi.Models
 {
     public class Login
     {

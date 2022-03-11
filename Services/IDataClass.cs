@@ -10,5 +10,6 @@ namespace OSBookReviewWepApi.Services
         Task<List<BookReview>> GetListAsync(int aid);
         Task<bool> UpdateAsync(BookReview p);
         Task<bool> UpdateAsync(List<BookReview> books);
+        Task<IEnumerable<Author>> GetAuthors();
     }
 }

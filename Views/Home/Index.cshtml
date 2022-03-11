@@ -1,69 +1,20 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@page
+@model OSBookReviewWepApi.Views.Home.IndexModel
+@using OSBookReviewWepApi.Models
 
 <div class="text-center">
-    <style>
-        .grid-container {
-          display: grid;
-          grid-template-columns: auto auto auto;
-          background-color: #2196F3;
-          padding: 10px;
-        }
-        .grid-item {
-          background-color: rgba(255, 255, 255, 0.8);
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          padding: 20px;
-          font-size: 30px;
-          text-align: center;
-        }
-        .row {
-          display: flex;
-          flex-wrap: wrap;
-          padding: 0 4px;
-        }
-
-        /* Create two equal columns that sits next to each other */
-        .column {
-          flex: 50%;
-          padding: 0 4px;
-        }
-
-        .column img {
-          margin-top: 8px;
-          vertical-align: middle;
-}
-    </style>
     <h1 class="display-4">Welcome to the Book Review Maui</h1>
-    <p> The project is composed of serveral different projectes which can be found on Git Hub
-        The web page part is still under construction</p>
-    <br/>
-    <hr/>
-    <p> 
-        <ol>
-         <li>The first can be found at <a href="https://github.com/brianreville/OSDataAccessLibrary">Data Access Library</a> </li>
-         <li>The second can be found at <a href="https://github.com/brianreville/OSBookReviewWepApi">dotNet Core Web App and API</a> </li>
-         <li>The third can be found at <a href="https://github.com/brianreville/OSBookReviewMAUI">dotNet MAUI Application</a> </li> 
-        </ol>
-        <img src="/Images/eye of the world.jpg" alt="The eye of the world" style="width:300px">
+    <p>
+        The project is composed of serveral different projectes which can be found on Git Hub
+        The web page part is still under construction
     </p>
-    <div class="grid-container">
-          <div class="grid-item"><img src="~/Images/eye of the world.jpg" alt="The eye of the world" style="width:300px"></div>
-          <div class="grid-item"><img src="~/Images/The great hunt.jpg" /></div>
-          <div class="grid-item"><img src="~/Images/The Dragon reborn.jpg" /></div>  
-          <div class="grid-item">4</div>
-          <div class="grid-item">5</div>
-          <div class="grid-item">6</div>  
-          <div class="grid-item">7</div>
-          <div class="grid-item">8</div>
-          <div class="grid-item">9</div>  
-    </div>
-        <div class="row">
-            <div class="column">
-                <img src="~/Images/eye of the world.jpg">
-                <img src="~/Images/The great hunt.jpg">
-                <img src="~/Images/The Dragon reborn.jpg">
-
-            </div>
-        </div>
+    <br />    
+    <hr />
+    <p>
+        <ol>
+            <li>The first can be found at <a href="https://github.com/brianreville/OSDataAccessLibrary">Data Access Library</a> </li>
+            <li>The second can be found at <a href="https://github.com/brianreville/OSBookReviewWepApi">dotNet Core Web App and API</a> </li>
+            <li>The third can be found at <a href="https://github.com/brianreville/OSBookReviewMAUI">dotNet MAUI Application</a> </li>
+        </ol>
+    </p>   
 </div>

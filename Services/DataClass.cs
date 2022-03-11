@@ -44,6 +44,12 @@ namespace OSBookReviewWepApi.Services
             return await GetBookList(aid);
         }
 
+
+        public async Task<IEnumerable<Author>> GetAuthors()
+        {
+            return await GetAuthorList();
+        }
+
         // private methods to handle public calls
 
         // inserts a single record of an object 
@@ -161,5 +167,6 @@ namespace OSBookReviewWepApi.Services
             }
 
         }
+
     }
 }
