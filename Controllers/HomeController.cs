@@ -10,15 +10,11 @@ namespace OSBookReviewWepApi.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IDataClass _data;
-        private AuthorModel author;
-        private TopAuthorModel topAuthorModel;
 
         public HomeController(ILogger<HomeController> logger, IDataClass _data)
         {
             _logger = logger;
             this._data = _data;
-            author = new AuthorModel(_data);
-            topAuthorModel = new TopAuthorModel(_data);
         }
 
         public IActionResult Index()
@@ -34,12 +30,12 @@ namespace OSBookReviewWepApi.Controllers
 
         public IActionResult Author()
         {
-            return View(author);
+            return View(new AuthorModel(_data));
         }
 
         public IActionResult TopAuthor()
         {
-            return View(topAuthorModel);
+            return View(new TopAuthorModel(_data));
         }
 
         public IActionResult Publisher()
