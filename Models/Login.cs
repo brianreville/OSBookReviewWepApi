@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OSBookReviewWebApi.Model
+namespace OSBookReviewWepApi.Models
 {
     public class Login
     {
         [Key]
         public int Userid { get; set; }
-        public string? Uaid { get; set; }
+        public int Uaid { get; set; }
         public int AccessLevel { get; set; }
         public string? UserName { get; set; }
         public string? UserPword { get; set; }

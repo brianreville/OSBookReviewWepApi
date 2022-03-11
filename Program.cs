@@ -8,15 +8,19 @@ using OSDataAccessLibrary.DataServices;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// add razor pages
+builder.Services.AddRazorPages();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 // Add rest controllors withou view
 builder.Services.AddControllers();
+
 // add dependency injection interface references
 builder.Services.AddTransient<IDataAccess, DataAccess>();
 builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
+builder.Services.AddTransient<ILoginData, LoginData>();
 builder.Services.AddTransient<IDataClass, DataClass>();
+
 // add authenticaion , using jwt bearing token authentincation for api calls
 builder.Services.AddAuthentication(options =>
     {
@@ -50,6 +54,10 @@ builder.Services.AddAuthorization(auth =>
             .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
             .RequireAuthenticatedUser().Build());
     });
+
+builder.Services.AddMvc().AddRazorPagesOptions(options =>
+    options.Conventions.AddPageRoute("/Views/Home/Index", ""));
+
 
 // if using swagger as api end point on developement would have this part uncommentted
 //builder.Services.AddSwaggerGen(c =>
@@ -90,12 +98,11 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.UseAuthentication();
+app.MapControllers();
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",

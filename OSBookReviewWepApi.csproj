@@ -15,4 +15,8 @@
     <ProjectReference Include="..\OSDataAccessLibrary\OSDataAccessLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="WebPageModel\" />
+  </ItemGroup>
+
 </Project>
