@@ -3,8 +3,8 @@ Open Source Web App and Api for Book Review .Net Maui appilcation for College Pr
 
 ## Project Overview
 
-### Overall Project Architecture Diagram (TBC)
-
+### Overall Project Architecture Diagram
+![Screenshot](OSProjectDiagram.png)
 ### Wep Api Structure - (Diagram and Text Explaination)(TBC)
 
 ### Data Access Library - 
