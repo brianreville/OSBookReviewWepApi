@@ -30,11 +30,19 @@ namespace OSBookReviewWepApi.Controllers
             return authors;
         }
         // public get command to return a list of books by a specifc author
+        [HttpGet]
         [Route("GetAuthorBooks")]
         public async Task<IEnumerable<BookReview>> GetBooksAsync(int aid)
         {
             List<BookReview> books = await GetAuthorBooks(aid);
             return books;
+        }
+        [HttpGet]
+        [Route("GetAuthorByName")]
+        public async Task<IEnumerable<Author>> GetAuthorsByName(string name)
+        {
+            List<Author> authors = await GetAuthorsName(name);
+            return authors;
         }
         // public post command to add a review
         [HttpPost]
@@ -56,15 +64,11 @@ namespace OSBookReviewWepApi.Controllers
         // private methods to call on the data service
 
         // return a list of authors from the data service
-        private async Task<List<Author>> GetAuthorList()
-        {
-            return await _data.GetListAsync();
-        }
+        private async Task<List<Author>> GetAuthorList() => await _data.GetListAsync();
         // returns a list of books belonging to a specific author using the authors id from the data service
-        private async Task<List<BookReview>> GetAuthorBooks(int aid)
-        {
-            return await _data.GetListAsync(aid);
-        }
+        private async Task<List<BookReview>> GetAuthorBooks(int aid) => await _data.GetListAsync(aid);
+        // get a list of authors by name
+        private async Task<List<Author>> GetAuthorsName(string name) => await _data.GetListAsync(name);
         // add record using data service
         private async Task<bool> AddRecord(BookReview book)
         {
