@@ -38,6 +38,10 @@ namespace OSBookReviewWepApi.Services
         {
             return await GetAuthorList();
         }
+        public async Task<List<Author>> GetListAsync(string name)
+        {
+            return await GetAuthorList(name);
+        }
         // get list of object types with param requirements
         public async Task<List<BookReview>> GetListAsync(int aid)
         {
@@ -155,6 +159,27 @@ namespace OSBookReviewWepApi.Services
 
                 // stored procedure to be called
                 string sql = "dbo.spGetTop50Authors";
+
+                List<Author> authors = await _data.GetList<Author, dynamic>(sql, p);
+                return authors;
+            }
+            catch (Exception)
+            {
+                // returns an empty list of type T in the event of exception being thrown
+                List<Author> authors = new();
+                return authors;
+            }
+        }
+        // gets a list of authors
+        private async Task<List<Author>> GetAuthorList(string name)
+        {
+            try
+            {
+                DynamicParameters p = new();
+                // add params if any
+                p.Add("@aname", name);
+                // stored procedure to be called
+                string sql = "dbo.spGetAuthorsByName";
 
                 List<Author> authors = await _data.GetList<Author, dynamic>(sql, p);
                 return authors;

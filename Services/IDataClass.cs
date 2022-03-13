@@ -11,5 +11,6 @@ namespace OSBookReviewWepApi.Services
         Task<bool> UpdateAsync(BookReview p);
         Task<bool> UpdateAsync(List<BookReview> books);
         Task<IEnumerable<Author>> GetAuthors();
+        Task<List<Author>> GetListAsync(string name);
     }
 }
