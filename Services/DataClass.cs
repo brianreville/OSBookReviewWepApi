@@ -171,6 +171,28 @@ namespace OSBookReviewWepApi.Services
             }
         }
         // gets a list of authors
+        private async Task<List<BookReview>> GetAuthorList(int aid)
+        {
+            try
+            {
+                DynamicParameters p = new();
+                // add params if any
+                p.Add("@aid", aid);
+                // stored procedure to be called
+                string sql = "dbo.spGetAuthorsByID";
+
+                List<BookReview> books = await _data.GetList<BookReview, dynamic>(sql, p);
+                return books;
+            }
+            catch (Exception)
+            {
+                // returns an empty list of type T in the event of exception being thrown
+                List<BookReview> books = new();
+                return books;
+            }
+        }
+
+        // gets a list of authors
         private async Task<List<Author>> GetAuthorList(string name)
         {
             try

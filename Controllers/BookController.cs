@@ -69,6 +69,7 @@ namespace OSBookReviewWepApi.Controllers
         private async Task<List<BookReview>> GetAuthorBooks(int aid) => await _data.GetListAsync(aid);
         // get a list of authors by name
         private async Task<List<Author>> GetAuthorsName(string name) => await _data.GetListAsync(name);
+
         // add record using data service
         private async Task<bool> AddRecord(BookReview book)
         {
