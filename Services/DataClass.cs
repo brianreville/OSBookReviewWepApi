@@ -19,9 +19,9 @@ namespace OSBookReviewWepApi.Services
             return await InsertRecord(p);
         }
         // get indiviudal object type
-        public async Task<BookReview> GetIndv(BookReview param)
+        public async Task<BookReview> GetIndv(int bdid)
         {
-            return await GetSingle(param);
+            return await GetSingle(bdid);
         }
         // update one if required.
         public async Task<bool> UpdateAsync(BookReview p)
@@ -57,12 +57,18 @@ namespace OSBookReviewWepApi.Services
         // private methods to handle public calls
 
         // inserts a single record of an object 
-        private async Task<bool> InsertRecord(BookReview p)
+        private async Task<bool> InsertRecord(BookReview book)
         {
             try
             {
+                // add params
+                DynamicParameters p = new();
+                p.Add("@BDID", book.BDID);
+                p.Add("@Userid", book.Userid);
+                p.Add("@Rating", book.Rating);
+                p.Add("@ReviewRemarks", book.ReviewRemarks);
                 // call stored procedure
-                string sql = "";
+                string sql = "dbo.spInsertBookReview";
                 // execute stored procedure via 
                 var result = await _data.AddAsync(sql, p);
 
@@ -75,16 +81,23 @@ namespace OSBookReviewWepApi.Services
         }
         // gets a single object passing a request of that object type in case of multiple param types
         // no current requirement
-        private async Task<BookReview> GetSingle(BookReview param)
+        private async Task<BookReview> GetSingle(int bdid)
         {
             // set of dynamic params depending on stored procedure params
             DynamicParameters p = new();
-
+            p.Add("@bdid", bdid);
 
             // set the stored procedure string
-            string sql = "";
+            string sql = "dbo.spGetSingleBook";
             // return the result of the DAL call
-            return await _data.GetIndvAsync<BookReview, dynamic>(sql, p);
+            var res = await _data.GetIndvAsync<BookReview, dynamic>(sql, p);
+            // check if book details exist if not return an empty book in event of book being deleted 
+            if (res != null)
+            {
+                return res;
+            }
+            res = new BookReview();
+            return res;
         }
         // updates a record of an object with the object passed for setting dynamic params
         // no current requirement
