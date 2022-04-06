@@ -1,16 +1,33 @@
-﻿@page
-@model OSBookReviewWepApi.Views.Home.IndexModel
+﻿@model OSBookReviewWepApi.Views.Home.IndexModel
 @using OSBookReviewWepApi.Models
-
+@{
+    //await Model.OnGetAsync();
+}
 <div class="text-center">
+    
     <h1 class="display-4">Welcome to the Book Review Maui</h1>
     <p>
         The project is composed of serveral different projectes which can be found on Git Hub
         The web page part is still under construction
-    </p>
-    <br />    
+    </p> 
+    <br /> 
     <hr />
-    <p>
+    <p>       
+        <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>Author Name</th>
+            <th>Publisher Name</th>
+            <th>Overall Rating</th>
+        </tr> 
+       @* @foreach (Author a in Model._authors )           
+        {
+            <tr>
+                <td>@a.AuthorName <a></a></td>
+                <td>@a.PublisherName</td>
+                <td>@a.OverallRating</td>
+            </tr>
+        }*@
+    </table>
         <ol>
             <li>The first can be found at <a href="https://github.com/brianreville/OSDataAccessLibrary">Data Access Library</a> </li>
             <li>The second can be found at <a href="https://github.com/brianreville/OSBookReviewWepApi">dotNet Core Web App and API</a> </li>

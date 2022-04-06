@@ -8,26 +8,50 @@ namespace OSBookReviewWepApi.Views.Home
     {
         private readonly IDataClass _data;
 
-        public List<Author> _authors { get; set; } = new();
+        public List<Author> _authors { get; set; }
+        public List<BookReview> _books { get; set; } 
         public IndexModel(IDataClass _data)
         {
             this._data = _data;
+            _authors = new List<Author>();
+            _books = new List<BookReview>();
         }
 
-        public void OnGet()
+        public async Task OnGetAsync()
         {
-            FillList();
+            await FillList();
         }
 
-        private async void FillList()
+        public async void GetBooks()
+        {
+            _books = await GetBooksList();
+        }
+
+        public async Task FillList()
         {
             _authors = await GetList();
+        }
+
+        public async void GetAuthors(string authorname)
+        {
+            _authors = await GetList(authorname);
         }
 
         private async Task<List<Author>> GetList()
         {
             _authors.Clear();
             return _authors = await _data.GetListAsync();
+        }
+
+        private async Task<List<Author>> GetList(string authorname)
+        {
+            return await _data.GetListAsync(authorname);
+        }
+
+        private async Task<List<BookReview>> GetBooksList()
+        {
+            _books.Clear();
+            return _books;
         }
     }
 }
