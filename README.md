@@ -1,3 +1,6 @@
+![GitHub forks](https://img.shields.io/github/forks/brianreville/OSBookReviewWepApi?style=social)
+![GitHub contributors](https://img.shields.io/github/contributors/brianreville/OSBookReviewWepApi?style=social)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/brianreville/OSBookReviewWepApi?style=social)
 # OSBookReviewWepApi
 Open Source Web App and Api for Book Review .Net Maui appilcation for College Project
 

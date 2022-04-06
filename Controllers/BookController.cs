@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OSBookReviewWepApi.Models;
 using OSBookReviewWepApi.Services;
 
@@ -44,6 +43,14 @@ namespace OSBookReviewWepApi.Controllers
             List<Author> authors = await GetAuthorsName(name);
             return authors;
         }
+
+        [HttpGet]
+        [Route("GetBookByID")]
+        public async Task<BookReview> GetBookByID(int bdid)
+        {
+            return await GetBook(bdid);
+        }
+
         // public post command to add a review
         [HttpPost]
         [Route("Insert")]
@@ -69,6 +76,7 @@ namespace OSBookReviewWepApi.Controllers
         private async Task<List<BookReview>> GetAuthorBooks(int aid) => await _data.GetListAsync(aid);
         // get a list of authors by name
         private async Task<List<Author>> GetAuthorsName(string name) => await _data.GetListAsync(name);
+
         // add record using data service
         private async Task<bool> AddRecord(BookReview book)
         {
@@ -78,6 +86,11 @@ namespace OSBookReviewWepApi.Controllers
         private async Task<bool> UpdateRecord(BookReview book)
         {
             return await _data.UpdateAsync(book);
+        }
+        // gets a single book by the bdid number
+        private async Task<BookReview> GetBook(int bdid)
+        {
+            return await _data.GetIndv(bdid);
         }
     }
 }
