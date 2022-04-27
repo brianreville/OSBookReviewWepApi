@@ -26,12 +26,13 @@ Please see associated repository
 Please see associated repository
 [OS Book Review .NET MAUI App ](https://github.com/brianreville/OSBookReviewMAUI)
 
-### Database Structure - (ERM Image to be dispalyed)(TBC)
+### Database Structure - (ERM Image Displayed Below)
 
 ERM Diagram
 ![Screenshot](ERMDiagram.PNG)
 
-Database Set-Up and Stored Procedure Files saved in SampleDB Folder(TBC)
+Database Set-Up Script and Stored Procedure Files saved in SampleDB Folder 
+Sample Dataset Stored in SampleDB Folder for Upload to Database when Set Up Script Completed
 
 ### Additional Sources
 
