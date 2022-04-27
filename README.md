@@ -2,6 +2,8 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/brianreville/OSBookReviewWepApi?style=social)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/brianreville/OSBookReviewWepApi?style=social)
 
+[![Build and deploy .NET Core application](https://github.com/brianreville/OSBookReviewWepApi/actions/workflows/bookreview2022.yml/badge.svg)](https://github.com/brianreville/OSBookReviewWepApi/actions/workflows/bookreview2022.yml)
+
 # OSBookReviewWepApi
 
 Open Source Web App and Api for Book Review .Net Maui appilcation for College Project
