@@ -14,5 +14,6 @@
         public string? ImageUrlM { get; set; }
         public string? ImageUrlL { get; set; }
         public string ReviewRemarks { get; set; }
+        public int AID { get; set; }
     }
 }

@@ -43,7 +43,7 @@ namespace OSBookReviewWepApi.Controllers
             List<Author> authors = await GetAuthorsName(name);
             return authors;
         }
-
+        // method to get book by id number
         [HttpGet]
         [Route("GetBookByID")]
         public async Task<BookReview> GetBookByID(int bdid)
@@ -65,6 +65,14 @@ namespace OSBookReviewWepApi.Controllers
         public async Task<IActionResult> UpdateBookReview([FromBody] BookReview book)
         {
             bool res = await UpdateRecord(book);
+            return res ? Ok() : BadRequest("Error in updating book review");
+        }
+        // public put command to update a multiple records
+        [HttpPut]
+        [Route("UpdateList")]
+        public async Task<IActionResult> UpdateBookReviewList([FromBody] List<BookReview> books)
+        {
+            bool res = await UpdateList(books);
             return res ? Ok() : BadRequest("Error in updating book review");
         }
 
@@ -92,5 +100,11 @@ namespace OSBookReviewWepApi.Controllers
         {
             return await _data.GetIndv(bdid);
         }
+        // updates a list of book reviews
+        private async Task<bool> UpdateList(List<BookReview> books)
+        {
+            return await _data.UpdateAsync(books);
+        }
+
     }
 }
