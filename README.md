@@ -2,6 +2,8 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/brianreville/OSBookReviewWepApi?style=social)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/brianreville/OSBookReviewWepApi?style=social)
 
+[![Build and deploy .NET Core application](https://github.com/brianreville/OSBookReviewWepApi/actions/workflows/bookreview2022.yml/badge.svg)](https://github.com/brianreville/OSBookReviewWepApi/actions/workflows/bookreview2022.yml)
+
 # OSBookReviewWepApi
 
 Open Source Web App and Api for Book Review .Net Maui appilcation for College Project
@@ -24,12 +26,13 @@ Please see associated repository
 Please see associated repository
 [OS Book Review .NET MAUI App ](https://github.com/brianreville/OSBookReviewMAUI)
 
-### Database Structure - (ERM Image to be dispalyed)(TBC)
+### Database Structure - (ERM Image Displayed Below)
 
 ERM Diagram
 ![Screenshot](ERMDiagram.PNG)
 
-Database Set-Up and Stored Procedure Files saved in SampleDB Folder(TBC)
+Database Set-Up Script and Stored Procedure Files saved in SampleDB Folder 
+Sample Dataset Stored in SampleDB Folder for Upload to Database when Set Up Script Completed
 
 ### Additional Sources
 
