@@ -43,10 +43,30 @@ Sample Dataset Stored in SampleDB Folder for Upload to Database when Set Up Scri
 Database Dataset - Sample Dataset Taken from Kaggle and then adjusted to fit designed db
 [Kaggle Dataset](https://www.kaggle.com/arashnic/book-recommendation-dataset)
 
-## How to run the project
+## How to run the project in the Developement Enviorment
 
-1. First you should download [Visual Studio 2022 PREVIEW](https://visualstudio.microsoft.com/fr/vs/preview/)
+1. Visual Studio 2022 Preview is required to run the complete solution correctly. [Visual Studio 2022 PREVIEW](https://visualstudio.microsoft.com/fr/vs/preview/)
 2. Create a folder that contains the three different repositories
 3. Open this folder, that you just created, with Visual Studio 2022 Preview. It should look like this : ![](https://user-images.githubusercontent.com/62793491/161441208-d83e5603-0785-42d4-923e-2f9308ed80d0.png)
 4. To open run of the three projects, click on the project you want and click on the `.sln` file ![](https://user-images.githubusercontent.com/62793491/161441244-45d3a28d-c77f-4183-a69c-3151ee81be6d.png)
-5. And here you go :)
+
+## Testing 
+Unit Testing has been implemented on the project and current implemented on the BookReviewController . 
+The repository for the Unit Testing project can be found here. [Unit Testing Repo](https://github.com/brianreville/OSBookReviewTests) 
+
+Test Result Image 
+![image](https://user-images.githubusercontent.com/49170791/167315494-a3251d72-56ed-4819-9774-c1a491f0efcb.png)
+
+
+## Useful Links
+Microsoft Azure Getting Started Page
+[Azure Tutorial](https://azure.microsoft.com/en-us/get-started/#learning-resources) 
+
+Microsoft Tutotiral on Web Api
+[.Net 6.0 Tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio)
+
+Tim Corey Creating a Web Api with Authentication using JWT
+[Tim Cory Youtube](https://www.youtube.com/watch?v=_LdiqQ13NBo) 
+
+Jason Watmore Tutorial on Creating a .net 6 Wep API
+[Jason Watmore Tutorial](https://jasonwatmore.com/post/2022/02/04/net-6-minimal-api-tutorial-and-example)
