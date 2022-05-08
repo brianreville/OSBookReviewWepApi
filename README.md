@@ -1,6 +1,6 @@
-![GitHub forks](https://img.shields.io/github/forks/brianreville/OSBookReviewWepApi?style=social)
-![GitHub contributors](https://img.shields.io/github/contributors/brianreville/OSBookReviewWepApi?style=social)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/brianreville/OSBookReviewWepApi?style=social)
+![GitHub forks](https://img.shields.io/github/forks/brianreville/OSBookReviewWepApi?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/brianreville/OSBookReviewWepApi?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/brianreville/OSBookReviewWepApi?style=for-the-badge)
 
 [![Build and deploy .NET Core application](https://github.com/brianreville/OSBookReviewWepApi/actions/workflows/bookreview2022.yml/badge.svg)](https://github.com/brianreville/OSBookReviewWepApi/actions/workflows/bookreview2022.yml)
 
@@ -25,6 +25,10 @@ Please see associated repository
 
 Please see associated repository
 [OS Book Review .NET MAUI App ](https://github.com/brianreville/OSBookReviewMAUI)
+
+### Web API Unit Testing Project
+Please see associated repository
+[OS Book Review Tests  ](https://github.com/brianreville/OSBookReviewTests)
 
 ### Database Structure - (ERM Image Displayed Below)
 
